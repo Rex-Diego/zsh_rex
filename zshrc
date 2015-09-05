@@ -4,7 +4,12 @@
 #%{[31m%}>>%{[m%}'
 
 
+function chpwd() {
+	    emulate -L zsh
+	        ls -F --color=auto
+}
 #关于历史纪录的配置
+POWERLINE_RIGHT_B="date replacement"
 # number of lines kept in history
 export HISTSIZE=10000
 # # number of lines saved in the history after logout
@@ -79,9 +84,10 @@ zstyle ':completion:*:messages' format $'\e[01;35m -- %d --\e[0m'
 zstyle ':completion:*:warnings' format $'\e[01;31m -- No Matches Found --\e[0m'
 
 #命令别名
-alias vi='vim -X'
-alias vim='vim -X'
+alias vi="vim -X"
+alias vim='~/soft/vim/bin/vim -X'
 alias cp='cp -i'
+alias vfh="vim -u ~/.vimrc_fh"
 alias mv='mv -i'
 alias rm='rm -i'
 alias ls='ls -F --color=auto'
@@ -90,6 +96,10 @@ alias l='ls'
 alias grep='grep --color=auto'
 alias ee='emacsclient -t'
 alias d='display'
+#The Fuck
+eval "$(thefuck --alias)"
+# You can use whatever you want as an alias, like for Mondays:
+eval "$(thefuck --alias FUCK)"
 
 #路径别名 进入相应的路径时只要 cd ~xxx
 hash -d WWW="/home/lighttpd/html"
