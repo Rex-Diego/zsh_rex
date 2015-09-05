@@ -1,0 +1,1 @@
+/data3/users/zy/.oh-my-zsh/themes/oh-my-zsh-solarized-powerline-theme/solarized-powerline.zsh-theme
